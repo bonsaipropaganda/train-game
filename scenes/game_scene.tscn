@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://6mefnskswu1p"]
+
+[ext_resource type="Texture2D" uid="uid://cmf0r5hefdna" path="res://art/Background/Background.png" id="1_giw0q"]
+[ext_resource type="PackedScene" uid="uid://byvdqqfcsxwip" path="res://scenes/train.tscn" id="2_jndsp"]
+[ext_resource type="PackedScene" uid="uid://bb3cu507wseap" path="res://scenes/train_bed.tscn" id="3_182li"]
+[ext_resource type="PackedScene" uid="uid://lf3qkuxkclks" path="res://scenes/cargo.tscn" id="4_ywgj4"]
+
+[node name="game_scene" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(319.5, 481.5)
+scale = Vector2(0.389634, 0.373047)
+texture = ExtResource("1_giw0q")
+
+[node name="Train" parent="." instance=ExtResource("2_jndsp")]
+position = Vector2(560, 618)
+
+[node name="TrainBed" parent="." instance=ExtResource("3_182li")]
+position = Vector2(181, 675)
+
+[node name="Cargo" parent="." instance=ExtResource("4_ywgj4")]
+position = Vector2(232, 834)
+
+[node name="Cargo2" parent="." instance=ExtResource("4_ywgj4")]
+position = Vector2(399, 853)
+
+[node name="Cargo3" parent="." instance=ExtResource("4_ywgj4")]
+position = Vector2(48, 828)
