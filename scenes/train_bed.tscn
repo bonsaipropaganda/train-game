@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bb3cu507wseap"]
+[gd_scene load_steps=3 format=3 uid="uid://bb3cu507wseap"]
 
 [ext_resource type="Texture2D" uid="uid://che1qmuucp1cu" path="res://art/Trains etc/TrailFlatbed01.png" id="1_gnetn"]
 
-[node name="TrainBed" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwn3y"]
+size = Vector2(356, 20)
+
+[node name="TrainBed" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_gnetn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_xwn3y")

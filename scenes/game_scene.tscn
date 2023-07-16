@@ -19,10 +19,10 @@ position = Vector2(560, 618)
 position = Vector2(181, 675)
 
 [node name="Cargo" parent="." instance=ExtResource("4_ywgj4")]
-position = Vector2(232, 834)
+position = Vector2(204, 265)
 
 [node name="Cargo2" parent="." instance=ExtResource("4_ywgj4")]
-position = Vector2(399, 853)
+position = Vector2(308, 485)
 
 [node name="Cargo3" parent="." instance=ExtResource("4_ywgj4")]
-position = Vector2(48, 828)
+position = Vector2(175, 562)
