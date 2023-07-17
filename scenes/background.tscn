@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://8dooflhday5k"]
+
+[ext_resource type="Texture2D" uid="uid://crf2i0xflfehy" path="res://art/Background/BackgroundNoFence.png" id="1_jnwbb"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(147.5, 480.5)
+scale = Vector2(0.389634, 0.373047)
+texture = ExtResource("1_jnwbb")
+
+[node name="BackgroundNoFence" type="Sprite2D" parent="."]
+position = Vector2(757.999, 480.5)
+scale = Vector2(0.389634, 0.373047)
+texture = ExtResource("1_jnwbb")
+
+[node name="BackgroundNoFence2" type="Sprite2D" parent="."]
+position = Vector2(-312.5, 480.5)
+scale = Vector2(0.389634, 0.373047)
+texture = ExtResource("1_jnwbb")

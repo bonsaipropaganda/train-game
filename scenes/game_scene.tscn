@@ -1,6 +1,5 @@
 [gd_scene load_steps=10 format=3 uid="uid://6mefnskswu1p"]
 
-[ext_resource type="Texture2D" uid="uid://cmf0r5hefdna" path="res://art/Background/Background.png" id="1_giw0q"]
 [ext_resource type="PackedScene" uid="uid://byvdqqfcsxwip" path="res://scenes/train.tscn" id="2_jndsp"]
 [ext_resource type="PackedScene" uid="uid://bb3cu507wseap" path="res://scenes/train_bed.tscn" id="3_182li"]
 [ext_resource type="PackedScene" uid="uid://38q3c8lxx2ea" path="res://scenes/invisble_barrier.tscn" id="5_7tujy"]
@@ -9,13 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://cw7e3nb2c0g3d" path="res://scenes/cargo/cardboard_small.tscn" id="7_yk7vb"]
 [ext_resource type="PackedScene" uid="uid://dr2o0shesy2hd" path="res://scenes/cargo/cardboard_tall.tscn" id="8_0i5gc"]
 [ext_resource type="PackedScene" uid="uid://bifpdbipt7rbs" path="res://scenes/cargo/crate_small.tscn" id="9_ae7kk"]
+[ext_resource type="PackedScene" uid="uid://8dooflhday5k" path="res://scenes/background.tscn" id="9_rblfa"]
 
 [node name="game_scene" type="Node2D"]
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(319.5, 481.5)
-scale = Vector2(0.389634, 0.373047)
-texture = ExtResource("1_giw0q")
+[node name="Background" parent="." instance=ExtResource("9_rblfa")]
+position = Vector2(39, -4)
 
 [node name="Train" parent="." instance=ExtResource("2_jndsp")]
 position = Vector2(701, 626)
