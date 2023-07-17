@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bifpdbipt7rbs"]
+
+[ext_resource type="PackedScene" uid="uid://lf3qkuxkclks" path="res://scenes/cargo/cargo.tscn" id="1_o018x"]
+[ext_resource type="Texture2D" uid="uid://3p86djvs55f5" path="res://art/Crates etc/CrateSmall.png" id="2_mkmyk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qynul"]
+size = Vector2(114, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vst0"]
+size = Vector2(114, 115)
+
+[node name="CrateSmall" instance=ExtResource("1_o018x")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_qynul")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_mkmyk")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2vst0")

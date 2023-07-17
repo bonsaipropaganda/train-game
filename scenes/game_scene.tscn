@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://6mefnskswu1p"]
+[gd_scene load_steps=10 format=3 uid="uid://6mefnskswu1p"]
 
 [ext_resource type="Texture2D" uid="uid://cmf0r5hefdna" path="res://art/Background/Background.png" id="1_giw0q"]
 [ext_resource type="PackedScene" uid="uid://byvdqqfcsxwip" path="res://scenes/train.tscn" id="2_jndsp"]
 [ext_resource type="PackedScene" uid="uid://bb3cu507wseap" path="res://scenes/train_bed.tscn" id="3_182li"]
-[ext_resource type="PackedScene" uid="uid://lf3qkuxkclks" path="res://scenes/cargo.tscn" id="4_ywgj4"]
+[ext_resource type="PackedScene" uid="uid://38q3c8lxx2ea" path="res://scenes/invisble_barrier.tscn" id="5_7tujy"]
+[ext_resource type="PackedScene" uid="uid://c0mei788y83pl" path="res://scenes/cargo/crate_big.tscn" id="5_kcnev"]
+[ext_resource type="PackedScene" uid="uid://jvbcyqnpyogb" path="res://scenes/cargo/barrel.tscn" id="6_nv88b"]
+[ext_resource type="PackedScene" uid="uid://cw7e3nb2c0g3d" path="res://scenes/cargo/cardboard_small.tscn" id="7_yk7vb"]
+[ext_resource type="PackedScene" uid="uid://dr2o0shesy2hd" path="res://scenes/cargo/cardboard_tall.tscn" id="8_0i5gc"]
+[ext_resource type="PackedScene" uid="uid://bifpdbipt7rbs" path="res://scenes/cargo/crate_small.tscn" id="9_ae7kk"]
 
 [node name="game_scene" type="Node2D"]
 
@@ -13,16 +18,49 @@ scale = Vector2(0.389634, 0.373047)
 texture = ExtResource("1_giw0q")
 
 [node name="Train" parent="." instance=ExtResource("2_jndsp")]
-position = Vector2(560, 618)
+position = Vector2(701, 626)
 
 [node name="TrainBed" parent="." instance=ExtResource("3_182li")]
-position = Vector2(181, 675)
+position = Vector2(322, 683)
 
-[node name="Cargo" parent="." instance=ExtResource("4_ywgj4")]
-position = Vector2(204, 265)
+[node name="InvisbleBarrier" parent="." instance=ExtResource("5_7tujy")]
+position = Vector2(317, 967)
+scale = Vector2(-4.22024, 1)
 
-[node name="Cargo2" parent="." instance=ExtResource("4_ywgj4")]
-position = Vector2(308, 485)
+[node name="InvisbleBarrier2" parent="." instance=ExtResource("5_7tujy")]
+position = Vector2(298, -45)
+scale = Vector2(-4.22024, 1)
 
-[node name="Cargo3" parent="." instance=ExtResource("4_ywgj4")]
-position = Vector2(175, 562)
+[node name="InvisbleBarrier3" parent="." instance=ExtResource("5_7tujy")]
+position = Vector2(-136, 502)
+rotation = 1.5708
+scale = Vector2(-5.33017, 1)
+
+[node name="InvisbleBarrier4" parent="." instance=ExtResource("5_7tujy")]
+position = Vector2(729, 499)
+rotation = 1.5708
+scale = Vector2(-5.33017, 1)
+
+[node name="CrateBig" parent="." instance=ExtResource("5_kcnev")]
+position = Vector2(224, 339)
+
+[node name="Barrel" parent="." instance=ExtResource("6_nv88b")]
+position = Vector2(441, 390)
+
+[node name="CardboardSmall" parent="." instance=ExtResource("7_yk7vb")]
+position = Vector2(321, 178)
+
+[node name="CardboardTall" parent="." instance=ExtResource("8_0i5gc")]
+position = Vector2(173, 164)
+
+[node name="CrateBig2" parent="." instance=ExtResource("5_kcnev")]
+position = Vector2(504, 130)
+
+[node name="CrateBig3" parent="." instance=ExtResource("5_kcnev")]
+position = Vector2(238, 823)
+
+[node name="CardboardTall2" parent="." instance=ExtResource("8_0i5gc")]
+position = Vector2(131, 574)
+
+[node name="CrateSmall" parent="." instance=ExtResource("9_ae7kk")]
+position = Vector2(600, 387)

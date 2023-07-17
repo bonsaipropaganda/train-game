@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0mei788y83pl"]
+
+[ext_resource type="PackedScene" uid="uid://lf3qkuxkclks" path="res://scenes/cargo/cargo.tscn" id="1_lxppm"]
+[ext_resource type="Texture2D" uid="uid://eq1dh0ldlpx1" path="res://art/Crates etc/CrateBig.png" id="2_ewkp1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_024kh"]
+size = Vector2(174, 171)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4y2o"]
+size = Vector2(172, 172)
+
+[node name="CrateBig" instance=ExtResource("1_lxppm")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_024kh")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_ewkp1")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_d4y2o")
