@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://6mefnskswu1p"]
+[gd_scene load_steps=9 format=3 uid="uid://6mefnskswu1p"]
 
 [ext_resource type="PackedScene" uid="uid://byvdqqfcsxwip" path="res://scenes/train.tscn" id="2_jndsp"]
-[ext_resource type="PackedScene" uid="uid://bb3cu507wseap" path="res://scenes/train_bed.tscn" id="3_182li"]
 [ext_resource type="PackedScene" uid="uid://38q3c8lxx2ea" path="res://scenes/invisble_barrier.tscn" id="5_7tujy"]
 [ext_resource type="PackedScene" uid="uid://c0mei788y83pl" path="res://scenes/cargo/crate_big.tscn" id="5_kcnev"]
 [ext_resource type="PackedScene" uid="uid://jvbcyqnpyogb" path="res://scenes/cargo/barrel.tscn" id="6_nv88b"]
@@ -13,52 +12,49 @@
 [node name="game_scene" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource("9_rblfa")]
-position = Vector2(39, -4)
+position = Vector2(339, -49)
 
 [node name="Train" parent="." instance=ExtResource("2_jndsp")]
-position = Vector2(701, 626)
-
-[node name="TrainBed" parent="." instance=ExtResource("3_182li")]
-position = Vector2(322, 683)
+position = Vector2(1117, 581)
 
 [node name="InvisbleBarrier" parent="." instance=ExtResource("5_7tujy")]
-position = Vector2(317, 967)
-scale = Vector2(-4.22024, 1)
+position = Vector2(659, 812)
+scale = Vector2(-9.22024, 1.76)
 
 [node name="InvisbleBarrier2" parent="." instance=ExtResource("5_7tujy")]
-position = Vector2(298, -45)
-scale = Vector2(-4.22024, 1)
+position = Vector2(598, -90)
+scale = Vector2(-8.98024, 1)
 
 [node name="InvisbleBarrier3" parent="." instance=ExtResource("5_7tujy")]
-position = Vector2(-136, 502)
+position = Vector2(-79, 415)
 rotation = 1.5708
-scale = Vector2(-5.33017, 1)
+scale = Vector2(-5.33017, 1.88)
 
 [node name="InvisbleBarrier4" parent="." instance=ExtResource("5_7tujy")]
-position = Vector2(729, 499)
+position = Vector2(1377, 420)
 rotation = 1.5708
-scale = Vector2(-5.33017, 1)
+scale = Vector2(-5.33017, 2.16)
 
 [node name="CrateBig" parent="." instance=ExtResource("5_kcnev")]
-position = Vector2(224, 339)
+position = Vector2(524, 294)
 
 [node name="Barrel" parent="." instance=ExtResource("6_nv88b")]
-position = Vector2(441, 390)
+position = Vector2(741, 345)
 
 [node name="CardboardSmall" parent="." instance=ExtResource("7_yk7vb")]
-position = Vector2(321, 178)
+position = Vector2(621, 133)
 
 [node name="CardboardTall" parent="." instance=ExtResource("8_0i5gc")]
-position = Vector2(173, 164)
+position = Vector2(473, 119)
 
 [node name="CrateBig2" parent="." instance=ExtResource("5_kcnev")]
-position = Vector2(504, 130)
+position = Vector2(804, 85)
 
 [node name="CrateBig3" parent="." instance=ExtResource("5_kcnev")]
-position = Vector2(238, 823)
+position = Vector2(255, 512)
 
 [node name="CardboardTall2" parent="." instance=ExtResource("8_0i5gc")]
-position = Vector2(131, 574)
+position = Vector2(431, 529)
 
 [node name="CrateSmall" parent="." instance=ExtResource("9_ae7kk")]
-position = Vector2(600, 387)
+position = Vector2(900, 342)
