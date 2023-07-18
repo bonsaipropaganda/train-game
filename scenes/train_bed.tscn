@@ -1,14 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bb3cu507wseap"]
+[gd_scene load_steps=5 format=3 uid="uid://bb3cu507wseap"]
 
+[ext_resource type="Script" path="res://scenes/train_bed.gd" id="1_aocyo"]
 [ext_resource type="Texture2D" uid="uid://che1qmuucp1cu" path="res://art/Trains etc/TrailFlatbed01.png" id="1_gnetn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwn3y"]
 size = Vector2(356, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bappr"]
+size = Vector2(14.1647, 20)
+
 [node name="TrainBed" type="StaticBody2D"]
 scale = Vector2(0.75, 0.75)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("1_aocyo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
@@ -17,3 +22,12 @@ texture = ExtResource("1_gnetn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_xwn3y")
+
+[node name="CargoDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CargoDetection"]
+position = Vector2(-0.858836, -381.333)
+scale = Vector2(24.9718, 37.9656)
+shape = SubResource("RectangleShape2D_bappr")
+
+[connection signal="body_exited" from="CargoDetection" to="." method="_on_cargo_detection_body_exited"]
