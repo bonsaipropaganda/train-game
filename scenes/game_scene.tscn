@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://6mefnskswu1p"]
+[gd_scene load_steps=11 format=3 uid="uid://6mefnskswu1p"]
 
 [ext_resource type="Script" path="res://scenes/game_scene.gd" id="1_6jg43"]
-[ext_resource type="PackedScene" uid="uid://byvdqqfcsxwip" path="res://scenes/train.tscn" id="2_jndsp"]
+[ext_resource type="PackedScene" uid="uid://byvdqqfcsxwip" path="res://scenes/train/train.tscn" id="2_jndsp"]
 [ext_resource type="PackedScene" uid="uid://38q3c8lxx2ea" path="res://scenes/invisble_barrier.tscn" id="5_7tujy"]
 [ext_resource type="PackedScene" uid="uid://c0mei788y83pl" path="res://scenes/cargo/crate_big.tscn" id="5_kcnev"]
 [ext_resource type="PackedScene" uid="uid://jvbcyqnpyogb" path="res://scenes/cargo/barrel.tscn" id="6_nv88b"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dr2o0shesy2hd" path="res://scenes/cargo/cardboard_tall.tscn" id="8_0i5gc"]
 [ext_resource type="PackedScene" uid="uid://bifpdbipt7rbs" path="res://scenes/cargo/crate_small.tscn" id="9_ae7kk"]
 [ext_resource type="PackedScene" uid="uid://8dooflhday5k" path="res://scenes/background.tscn" id="9_rblfa"]
+[ext_resource type="PackedScene" uid="uid://bgunissr3e64u" path="res://scenes/train/invisible_train_track.tscn" id="10_l8d6y"]
 
 [node name="game_scene" type="Node2D"]
 script = ExtResource("1_6jg43")
@@ -17,7 +18,7 @@ script = ExtResource("1_6jg43")
 position = Vector2(339, -49)
 
 [node name="Train" parent="." instance=ExtResource("2_jndsp")]
-position = Vector2(-200, 584)
+position = Vector2(501, 578)
 
 [node name="InvisbleBarrier" parent="." instance=ExtResource("5_7tujy")]
 position = Vector2(659, 812)
@@ -110,6 +111,10 @@ offset_top = 134.5
 offset_right = 140.0
 offset_bottom = 165.5
 text = "Restart"
+
+[node name="InvisibleTrainTrack" parent="." instance=ExtResource("10_l8d6y")]
+position = Vector2(600, 671)
+scale = Vector2(6.08, 1)
 
 [connection signal="toggled" from="Control/CheckButton" to="Train" method="_on_check_button_toggled"]
 [connection signal="pressed" from="Control/Button" to="Train" method="_on_button_pressed"]
