@@ -16,8 +16,8 @@ func print_cargo():
 
 
 func _on_cargo_detection_body_exited(body: Node2D) -> void:
-	print(body.name)
+	print(body.name + " exited")
 	var body_parent = body.get_parent().name
-	if body_parent == "TrainBed":
-		body.reparent(get_parent().get_parent())
-		print(body.get_parent().name)
+#	if body_parent == "TrainBed":
+#		body.reparent(get_parent().get_parent())
+#		print(body.get_parent().name)
