@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb3cu507wseap"]
+[gd_scene load_steps=5 format=3 uid="uid://bb3cu507wseap"]
 
 [ext_resource type="Script" path="res://scenes/train_bed.gd" id="1_aocyo"]
 [ext_resource type="Texture2D" uid="uid://che1qmuucp1cu" path="res://art/Trains etc/TrailFlatbed01.png" id="1_gnetn"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rp12v"]
-friction = 0.4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwn3y"]
 size = Vector2(356, 20)
@@ -15,7 +12,6 @@ size = Vector2(14.1647, 20)
 [node name="TrainBed" type="RigidBody2D"]
 collision_layer = 3
 collision_mask = 7
-physics_material_override = SubResource("PhysicsMaterial_rp12v")
 gravity_scale = 0.0
 script = ExtResource("1_aocyo")
 

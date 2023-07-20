@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://byvdqqfcsxwip"]
+[gd_scene load_steps=5 format=3 uid="uid://byvdqqfcsxwip"]
 
 [ext_resource type="Texture2D" uid="uid://bbsmjwcmmqyji" path="res://art/Trains etc/Train.png" id="1_bl4ql"]
 [ext_resource type="Script" path="res://scenes/train.gd" id="1_vtl6c"]
 [ext_resource type="PackedScene" uid="uid://bb3cu507wseap" path="res://scenes/train_bed.tscn" id="2_4hptj"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ho23x"]
+friction = 0.4
+rough = true
+
 [node name="Train" type="StaticBody2D"]
 scale = Vector2(0.75, 0.75)
 collision_layer = 2
 collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_ho23x")
 script = ExtResource("1_vtl6c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
