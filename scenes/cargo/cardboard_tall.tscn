@@ -10,7 +10,6 @@ size = Vector2(94, 132.75)
 size = Vector2(97, 134)
 
 [node name="CardboardTall" instance=ExtResource("1_tu5nf")]
-mass = 0.12
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(0, -0.375)

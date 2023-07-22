@@ -23,4 +23,5 @@ func _on_check_button_toggled(button_pressed: bool) -> void:
 
 func _on_button_pressed() -> void:
 	$TrainBed.print_cargo()
+	await get_tree().create_timer(2).timeout
 	move = true

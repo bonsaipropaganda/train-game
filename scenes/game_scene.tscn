@@ -1,8 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://6mefnskswu1p"]
+[gd_scene load_steps=11 format=3 uid="uid://6mefnskswu1p"]
 
 [ext_resource type="Script" path="res://scenes/game_scene.gd" id="1_6jg43"]
 [ext_resource type="PackedScene" uid="uid://byvdqqfcsxwip" path="res://scenes/train/train.tscn" id="2_jndsp"]
+[ext_resource type="Script" path="res://scenes/StartButton.gd" id="4_r2m1o"]
+[ext_resource type="PackedScene" uid="uid://4pyeho2agsyq" path="res://scenes/control/timer_label.tscn" id="5_2xgc8"]
 [ext_resource type="PackedScene" uid="uid://38q3c8lxx2ea" path="res://scenes/invisble_barrier.tscn" id="5_7tujy"]
+[ext_resource type="PackedScene" uid="uid://c0mei788y83pl" path="res://scenes/cargo/crate_big.tscn" id="5_kcnev"]
+[ext_resource type="PackedScene" uid="uid://cikfh5iyv5m0r" path="res://scenes/control/intro_label.tscn" id="6_wa181"]
+[ext_resource type="PackedScene" uid="uid://cw7e3nb2c0g3d" path="res://scenes/cargo/cardboard_small.tscn" id="7_yk7vb"]
+[ext_resource type="PackedScene" uid="uid://dr2o0shesy2hd" path="res://scenes/cargo/cardboard_tall.tscn" id="8_0i5gc"]
 [ext_resource type="PackedScene" uid="uid://8dooflhday5k" path="res://scenes/background.tscn" id="9_rblfa"]
 
 [node name="game_scene" type="Node2D"]
@@ -12,7 +18,7 @@ script = ExtResource("1_6jg43")
 position = Vector2(339, -49)
 
 [node name="Train" parent="." instance=ExtResource("2_jndsp")]
-position = Vector2(501, 578)
+position = Vector2(766, 584)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -24,6 +30,7 @@ offset_bottom = -59.0
 scale = Vector2(2, 2)
 
 [node name="CheckButton" type="CheckButton" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 65.0
 offset_top = 42.0
@@ -34,19 +41,44 @@ text = "Train go"
 
 [node name="DoneButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 72.0
-offset_top = 97.5
-offset_right = 192.0
-offset_bottom = 128.5
+offset_left = 68.0
+offset_top = 59.5
+offset_right = 188.0
+offset_bottom = 90.5
 text = "Done"
 
 [node name="RestartButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 75.0
-offset_top = 134.5
-offset_right = 140.0
-offset_bottom = 165.5
+offset_left = 71.0
+offset_top = 96.5
+offset_right = 136.0
+offset_bottom = 127.5
 text = "Restart"
+
+[node name="StartButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 308.5
+offset_top = 219.0
+offset_right = 393.5
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 32
+text = "Start"
+script = ExtResource("4_r2m1o")
+
+[node name="TimerLabel" parent="Control" instance=ExtResource("5_2xgc8")]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 65.0
+offset_right = 576.0
+offset_bottom = 112.0
+
+[node name="IntroLabel" parent="Control" instance=ExtResource("6_wa181")]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 161.0
+offset_right = 364.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 32
 
 [node name="InvisibleBarriers" type="Node" parent="."]
 
@@ -56,7 +88,7 @@ rotation = -3.14159
 scale = Vector2(9.22024, -1.76)
 
 [node name="InvisbleBarrier2" parent="InvisibleBarriers" instance=ExtResource("5_7tujy")]
-position = Vector2(630, -277)
+position = Vector2(667, -538)
 rotation = -3.14159
 scale = Vector2(8.98024, -1)
 
@@ -65,11 +97,55 @@ position = Vector2(-79, 415)
 rotation = -1.57079
 scale = Vector2(7.05017, -1.88)
 
-[node name="InvisbleBarrier4" parent="InvisibleBarriers" instance=ExtResource("5_7tujy")]
+[node name="FinalBarrier" parent="InvisibleBarriers" instance=ExtResource("5_7tujy")]
 position = Vector2(1377, 420)
 rotation = -1.57079
 scale = Vector2(7.33017, -2.16)
 
+[node name="CargoHolder" parent="InvisibleBarriers" instance=ExtResource("5_7tujy")]
+position = Vector2(676, 40)
+scale = Vector2(8.52, 1)
+
+[node name="Cargo" type="Node" parent="."]
+
+[node name="CardboardSmall" parent="Cargo" instance=ExtResource("7_yk7vb")]
+position = Vector2(882, -57)
+
+[node name="CardboardTall" parent="Cargo" instance=ExtResource("8_0i5gc")]
+position = Vector2(984, -86)
+
+[node name="CrateBig" parent="Cargo" instance=ExtResource("5_kcnev")]
+position = Vector2(1170, -105)
+
+[node name="CardboardSmall2" parent="Cargo" instance=ExtResource("7_yk7vb")]
+position = Vector2(56, -74)
+
+[node name="CardboardTall2" parent="Cargo" instance=ExtResource("8_0i5gc")]
+position = Vector2(238, -95)
+rotation = -0.979392
+
+[node name="CrateBig2" parent="Cargo" instance=ExtResource("5_kcnev")]
+position = Vector2(172, -382)
+rotation = 0.611924
+
+[node name="CardboardSmall3" parent="Cargo" instance=ExtResource("7_yk7vb")]
+position = Vector2(874, -299)
+rotation = 0.732211
+
+[node name="CardboardTall3" parent="Cargo" instance=ExtResource("8_0i5gc")]
+position = Vector2(976, -328)
+rotation = 0.732211
+
+[node name="CrateBig3" parent="Cargo" instance=ExtResource("5_kcnev")]
+position = Vector2(1162, -347)
+rotation = 0.732211
+
 [connection signal="toggled" from="Control/CheckButton" to="Train" method="_on_check_button_toggled"]
+[connection signal="pressed" from="Control/DoneButton" to="." method="_on_done_button_pressed"]
 [connection signal="pressed" from="Control/DoneButton" to="Train" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/DoneButton" to="Control/TimerLabel" method="_on_done_button_pressed"]
 [connection signal="pressed" from="Control/RestartButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/StartButton" to="Control/StartButton" method="_on_pressed"]
+[connection signal="pressed" from="Control/StartButton" to="Control/TimerLabel" method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/StartButton" to="Control/IntroLabel" method="_on_start_button_pressed"]

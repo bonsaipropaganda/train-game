@@ -1,9 +1,10 @@
-extends Node2D
+extends Label
 
+var time = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	self.text = "Time: " + str(time)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -11,13 +12,15 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_button_2_pressed() -> void:
-	get_tree().reload_current_scene()
+func _on_timer_timeout() -> void:
+	$Timer.start()
+	time += 1
+	self.text = "Time: " + str(time)
 
 
 func _on_start_button_pressed() -> void:
-	$InvisibleBarriers/CargoHolder.queue_free()
+	$Timer.start()
 
 
 func _on_done_button_pressed() -> void:
-	$InvisibleBarriers/FinalBarrier.queue_free()
+	$Timer.stop()

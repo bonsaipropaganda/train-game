@@ -1,4 +1,4 @@
-extends Node2D
+extends Label
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,13 +11,14 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_button_2_pressed() -> void:
-	get_tree().reload_current_scene()
-
-
 func _on_start_button_pressed() -> void:
-	$InvisibleBarriers/CargoHolder.queue_free()
+	self.visible = true
+	self.text = "Stack the boxes on the train!"
+	$Timer.start()
 
 
-func _on_done_button_pressed() -> void:
-	$InvisibleBarriers/FinalBarrier.queue_free()
+func _on_timer_timeout() -> void:
+	print("timeout")
+	self.text = ""
+	self.visible = false
+	$Timer.stop()

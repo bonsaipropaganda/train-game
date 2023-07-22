@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://4pyeho2agsyq"]
+
+[ext_resource type="Script" path="res://scenes/control/timer_label.gd" id="1_lnd7d"]
+
+[node name="TimerLabel" type="Label"]
+offset_left = 647.5
+offset_top = 62.0
+offset_right = 687.5
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 34
+script = ExtResource("1_lnd7d")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

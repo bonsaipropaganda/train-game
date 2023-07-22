@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cikfh5iyv5m0r"]
+
+[ext_resource type="Script" path="res://scenes/control/intro_label.gd" id="1_lo7ij"]
+
+[node name="IntroLabel" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+script = ExtResource("1_lo7ij")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -23,7 +23,6 @@ position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_xwn3y")
 
 [node name="CargoDetection" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CargoDetection"]
 position = Vector2(-0.858836, -381.333)
