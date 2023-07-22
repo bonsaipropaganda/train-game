@@ -23,3 +23,4 @@ func _on_check_button_toggled(button_pressed: bool) -> void:
 
 func _on_button_pressed() -> void:
 	$TrainBed.print_cargo()
+	move = true
